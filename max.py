@@ -49,6 +49,9 @@ def star_command_builder(config, read_1, read_2, threads, output):
 	print command_string
 	return command_string
 
+def rsem_command_builder(input_file, annotation, output, threads):
+	rsem_command = 'rsem-calculate-expression -p {} --no-bam-output {} {} {}'.format(threads, input_file, annotation, output)
+
 def main():
 
 	# Calculate 90% of CPU
